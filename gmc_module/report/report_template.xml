@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_employeelist">
+			<div class="article">
+				
+				<div class="oe_structure" />
+				<div class="row">
+<br /> <br />
+					<table width="100%"
+						t-attf-style="font-family: Arial,Helvetica ">
+						<tr>
+							<td width="25%">
+							<br />
+								<b>
+									<span>Card No :</span>
+								</b>
+							</td>
+							<td width="75%">
+								<br />
+								<span t-field="doc.cardno" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td width="25%">
+							
+								<b>
+									<span>Employee Name. :</span>
+								</b>
+							</td>
+							<td width="75%">
+								<span t-field="doc.name" />
+								<br />
+							</td>
+						</tr>
+					</table>
+					<br />
+				</div>
+			</div>
+	</template>
+
+	<template id="report_memberlist">
+		
+			<div class="article">
+				
+				<div class="oe_structure" />
+				<div class="row">
+					<table width="100%"
+						t-attf-style="font-family: Arial,Helvetica ">
+						<tr>
+							<td width="25%">
+								<b>
+									<span>Member Name :</span>
+								</b>
+							</td>
+							<td width="25%">
+								<span t-field="doc2.name" />
+								<br />
+							</td>
+						
+							<td width="25%">
+								<b>
+									<span>Age :</span>
+								</b>
+							</td>
+							<td width="25%">
+								<span t-field="doc2.age" />
+								<br /> 
+							</td>
+						</tr>
+						
+
+					</table>
+					<br />
+				</div>
+			</div>
+		
+	</template>
+
+	<template id="report_template">
+		<t t-call="web.html_container">
+			<center>
+					<h4>
+						<header>
+							<u>GMC Employee/Member List</u>
+						</header>
+					</h4>
+			</center>
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="gmc_module.report_employeelist" />
+				
+				<t t-foreach="doc.member_id" t-as="doc2">
+					<t t-call="gmc_module.report_memberlist" />
+				</t>
+			</t>
+		</t>
+	</template>
+
+</odoo>

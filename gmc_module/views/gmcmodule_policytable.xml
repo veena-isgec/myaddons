@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="gmcmodule_policytable_action"
+name="Policy Data"
+res_model="gmcmodule.policytable" />
+
+<menuitem
+ id="gmcmodule_policytable_menu"
+ name="GMC Module-Policy" 
+ action="gmcmodule_policytable_action"
+ parent=""
+ groups="group_gmcadmin"
+ sequence="5" />
+
+<record id ="gmcmodule_policytable_view_form" model="ir.ui.view">
+   <field name="name">Policy Data Form</field>
+   <field name="model">gmcmodule.policytable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="name"/>
+		<field name="startdate"/>
+		<field name="enddate"/>
+		<field name="premium"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="gmcmodule_policytable_view_tree" model="ir.ui.view">
+  <field name="name">Policy Data List</field>
+  <field name="model">gmcmodule.policytable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>

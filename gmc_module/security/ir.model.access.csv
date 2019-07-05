@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_employeetable,gmcmodule.employeetable_default,model_gmcmodule_employeetable,,1,0,0,0
+acl_employeetable_employee,gmcmodule.employeetable_employee,model_gmcmodule_employeetable,group_gmcemployee,1,1,1,1
+acl_policytable,gmcmodule.policytable_default,model_gmcmodule_policytable,,1,0,0,0
+acl_policytable_gmcadmin,gmcmodule.policytable_gmcadmin,model_gmcmodule_policytable,group_gmcadmin,1,1,1,1
+acl_membertable,gmcmodule.membertable_default,model_gmcmodule_membertable,,1,0,0,0
+acl_membertable_employee,gmcmodulemembertable_employee,model_gmcmodule_membertable,group_gmcemployee,1,1,1,1

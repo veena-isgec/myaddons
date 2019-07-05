@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+
+<odoo>
+
+<act_window
+id="action_gmc_details_export2"
+name="Export Data"
+res_model="gmc.details.wizard2" />
+
+		<menuitem
+            id="gmc_detail_wizard_menu2"
+            name="GMC Employee List2" 
+            action="action_gmc_details_export2"
+            parent=""
+            sequence="5" />
+		
+    	<!--Export Form & Action -->
+    	
+        <record id="view_gmc_details_wizard2" model="ir.ui.view">
+            <field name="name">Export</field>
+            <field name="model">gmc.details.wizard2</field>
+            <field name="arch" type="xml">
+                <form string="Export">
+                <group>
+                
+                	 <field name="gmc_policy_id" options="{'no_create': True}"/>
+                	</group>
+                	<footer>
+                        <button name="button_excel" string=" Export Employee Details" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer> 
+                 </form>
+            </field>
+        </record>
+        
+        <record id="excel_form_view_gmc_details2" model="ir.ui.view">
+			<field name="name">view.gmcreport2</field>
+			<field name="model">view.gmcreport2</field>
+			<field name="arch" type="xml">
+				<form string="popup">
+					<sheet>
+						<group col="4" colspan="2">
+							<field name="file_name" filename="datas_fname"/>
+							<field name="datas_fname"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+        
+</odoo>

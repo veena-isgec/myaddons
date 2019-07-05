@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="gmcmodule_employeetable_action"
+name="Employee Data"
+res_model="gmcmodule.employeetable" />
+
+<menuitem
+ id="gmcmodule_employeetable_menu"
+ name="GMC Module-Employee" 
+ action="gmcmodule_employeetable_action"
+ parent=""
+ sequence="5" />
+
+<record id ="gmcmodule_employeetable_view_form" model="ir.ui.view">
+   <field name="name">Employee Data Form</field>
+   <field name="model">gmcmodule.employeetable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+		<field name="cardno"/>
+		<field name="name"/>
+		<field name="dateofjoining"/>
+		<field name="policytype_id"/>
+		<field name="suminsured"/>
+		<field name="proratapremium"/>
+		<field name="coveringdays"/>
+		<field name="startdate"/>
+		<field name="enddate"/>
+		<field name="member_id"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="gmcmodule_employeetable_view_tree" model="ir.ui.view">
+  <field name="name">Employee Data List</field>
+  <field name="model">gmcmodule.employeetable</field>
+  <field name="arch" type="xml">
+    <tree>
+	<field name="cardno"/>
+	<field name="proratapremium"/>
+	<field name="startdate"/>
+	<field name="enddate"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>

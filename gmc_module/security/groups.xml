@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="group_gmcadmin" model="res.groups">
+    <field name="name">GMC Module Admin</field>
+  </record>
+  <record id="group_gmcemployee" model="res.groups">
+    <field name="name">GMC Module Employee</field>
+  </record>
+</odoo>

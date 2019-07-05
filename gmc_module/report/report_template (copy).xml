@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_employeelist">
+		<t t-call="web.external_layout">
+			<div class="article">
+				<center>
+					<h4>
+						<header>
+							<u>GMC employee List</u>
+						</header>
+					</h4>
+				</center>
+				<div class="oe_structure" />
+				<div class="row">
+					<table width="100%"
+						t-attf-style="font-family: Arial,Helvetica ">
+						<tr>
+							<td width="25%">
+								<b>
+									<span>Card No :</span>
+								</b>
+							</td>
+							<td width="75%">
+								<span t-field="doc.cardno" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td width="25%">
+								<b>
+									<span>Employee Name. :</span>
+								</b>
+							</td>
+							<td width="75%">
+								<span t-field="doc.name" />
+								<br />
+							</td>
+						</tr>
+					</table>
+					<br />
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<template id="report_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="gmc_module.report_employeelist" />
+			</t>
+		</t>
+	</template>
+
+</odoo>

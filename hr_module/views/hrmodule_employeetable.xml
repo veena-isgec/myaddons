@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="hrmodule_employeetable_action"
+name="Employee Data"
+res_model="hrmodule.employeetable" />
+
+<menuitem
+ id="hrmodule_employeetable_menu"
+ name="HR Module-Employee" 
+ action="hrmodule_employeetable_action"
+ parent=""
+ sequence="5" />
+
+<record id ="hrmodule_employeetable_view_form" model="ir.ui.view">
+   <field name="name">Employee Data Form</field>
+   <field name="model">hrmodule.employeetable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="cardno"/>
+		<field name="name"/>
+		<field name="dateofjoining"/>
+		<field name="user_id"/>		
+		<field name="login"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="hrmodule_employeetable_view_tree" model="ir.ui.view">
+  <field name="name">Employee Data List</field>
+  <field name="model">hrmodule.employeetable</field>
+  <field name="arch" type="xml">
+    <tree>
+	<field name="cardno"/>
+	<field name="name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
